@@ -15,9 +15,18 @@ namespace _15_09_15
 
             Libro miLibro=new Libro();
             Libreria unaLibreria = new Libreria();
+            int indice;
 
-            unaLibreria.agregarLibro(miLibro);
-            unaLibreria.agregarLibro(miLibro);
+            if (unaLibreria.agregarLibro(miLibro))
+            {
+                Console.WriteLine("El libro se ingresó");
+            }
+            
+            //unaLibreria.agregarLibro(miLibro);//agrega otro libro. prueba indice. ah re loco!
+
+            indice = unaLibreria.indiceLibre();
+            Console.WriteLine(indice);
+            
         }
     }
 }

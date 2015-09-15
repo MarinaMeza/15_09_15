@@ -18,7 +18,8 @@ namespace _15_09_15
 
         public bool agregarLibro(Libro libroR)
         {
-            for (int i = 0; i < this.ArrayLibros.Length; i++)
+            int i;
+            for (i = 0; i < this.ArrayLibros.Length; i++)
             {
                 if (this.ArrayLibros[i] == null)
                 { 
@@ -28,6 +29,23 @@ namespace _15_09_15
             }
             return false;
         }
+        
+        /// <summary>
+        /// Retornará el primer índice libre, sino retornará -1.
+        /// </summary>
+        /// <returns></returns>
+        public int indiceLibre()
+        {
+            int i;
 
+            for (i = 0; i < this.ArrayLibros.Length; i++)
+            {
+                if (this.ArrayLibros[i] == null)
+                {
+                    return i;//o i+1?
+                }
+            }
+            return -1;
+        }
     }
 }
