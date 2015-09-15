@@ -9,10 +9,23 @@ namespace _15_09_15
     {
         public string direccion;
         public string nomApe;
-        public Libro[] libros;
+        public Libro[] ArrayLibros;
         
         public Libreria()
-        { 
+        {
+            ArrayLibros = new Libro[10];
         }
+
+        public void agregarLibro(Libro libroR)
+        {
+            for (int i = 0; i < this.ArrayLibros.Length; i++)
+            {
+                if (this.ArrayLibros[i] == null)
+                { 
+                    this.ArrayLibros[i] =  libroR;
+                }
+            }
+        }
+
     }
 }

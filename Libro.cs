@@ -10,6 +10,10 @@ namespace _15_09_15
         public string titulo;
         public int codigo;
 
-
+        public Libro()
+        {
+            titulo = "NN";
+            codigo = 1234;
+        }
     }
 }
