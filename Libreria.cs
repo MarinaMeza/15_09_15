@@ -16,8 +16,17 @@ namespace _15_09_15
             ArrayLibros = new Libro[10];
         }
 
-        public bool agregarLibro(Libro libroR)
+        public bool agregarLibro(Libro libroRecibido)
         {
+            //si hay un indice libre, mete el libro en ese indice libre.
+            if (this.indiceLibre() != -1)
+            {
+                this.ArrayLibros[this.indiceLibre()] = libroRecibido;
+                return true;
+            }
+            return false;
+
+            /*
             int i;
             for (i = 0; i < this.ArrayLibros.Length; i++)
             {
@@ -27,7 +36,7 @@ namespace _15_09_15
                     return true;
                 }
             }
-            return false;
+            return false;*/
         }
         
         /// <summary>
