@@ -13,6 +13,7 @@ namespace _15_09_15
 
         public Libro()
         {
+            autor = "Anonimo";
             titulo = "NN";
             codigo = 1234;
         }

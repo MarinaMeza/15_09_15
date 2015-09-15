@@ -16,6 +16,12 @@ namespace _15_09_15
             ArrayLibros = new Libro[10];
         }
 
+        public static Libreria operator +(Libreria Libreria1, Libro LibroNuevo)
+        {
+            Libreria1.agregarLibro(LibroNuevo);
+            return Libreria1;
+        }
+
         public bool agregarLibro(Libro libroRecibido)
         {
             int indice=this.indiceLibre();
