@@ -15,7 +15,9 @@ namespace _15_09_15
 
             Libro miLibro=new Libro();
             Libreria unaLibreria = new Libreria();
-            unaLibreria.ArrayLibros[0] = miLibro;
+
+            unaLibreria.agregarLibro(miLibro);
+            unaLibreria.agregarLibro(miLibro);
         }
     }
 }

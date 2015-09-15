@@ -16,15 +16,17 @@ namespace _15_09_15
             ArrayLibros = new Libro[10];
         }
 
-        public void agregarLibro(Libro libroR)
+        public bool agregarLibro(Libro libroR)
         {
             for (int i = 0; i < this.ArrayLibros.Length; i++)
             {
                 if (this.ArrayLibros[i] == null)
                 { 
                     this.ArrayLibros[i] =  libroR;
+                    return true;
                 }
             }
+            return false;
         }
 
     }
